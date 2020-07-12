@@ -7,11 +7,10 @@ import crudtable.pages.BaseClass;
 import crudtable.pages.IndexPage;
 import crudtable.utility.Helper;
 
-
-public class MultiplePrintTest extends BaseClass
+public class MultipleEditTest extends BaseClass
 {
 	@Test
-	public void printAllEmployeesApp() throws InterruptedException, IOException
+	public void editAllEmployeesApp() throws InterruptedException, IOException //Remove all the phone numbers prefixes
 	{
 		String testName = new Throwable().getStackTrace()[0].getMethodName();
 		
@@ -19,7 +18,7 @@ public class MultiplePrintTest extends BaseClass
 		
 		Helper.captureScreenshot(driver,testName,"01_BrowserStarted");
 		
-		indexPage.printAllEmployees();
+		indexPage.updateAllEmployees();
 		
 		Thread.sleep(1500);
 		

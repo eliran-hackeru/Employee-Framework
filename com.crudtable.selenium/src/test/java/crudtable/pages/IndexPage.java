@@ -2,6 +2,8 @@ package crudtable.pages;
 
 import java.io.IOException;
 import java.util.List;
+
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -115,6 +117,21 @@ public class IndexPage {
 		for (int i=0;i<uEmails.size();i++)
 		{
 			System.out.println(uNames.get(i).getText()+" "+uEmails.get(i).getText()+" "+uPhones.get(i).getText());
+		}
+	}
+	
+	public void updateAllEmployees()
+	{
+		for (int i=0;i<uEmails.size();i++)
+		{
+			editButton.get(i).click();
+			Helper.waitForElementByID(driver, "update");
+			uPhone.sendKeys(Keys.HOME);
+			for (int j=0;j<5;j++)
+			{
+				uPhone.sendKeys(Keys.DELETE);
+			}
+			updateButton.click();
 		}
 	}
 }
