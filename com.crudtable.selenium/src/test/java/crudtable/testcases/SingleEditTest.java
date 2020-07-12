@@ -6,27 +6,27 @@ import crudtable.pages.BaseClass;
 import crudtable.pages.IndexPage;
 import crudtable.utility.Helper;
 
-public class SingleAddTest extends BaseClass
+public class SingleEditTest extends BaseClass
 {
-	
 	@Test
-	public void addEmployeeApp() throws InterruptedException
+	public void editEmployeeApp() throws InterruptedException
 	{
-		String testName = new Throwable().getStackTrace()[0].getMethodName();
+String testName = new Throwable().getStackTrace()[0].getMethodName();
 		
 		IndexPage indexPage = PageFactory.initElements(driver, IndexPage.class);
 		
 		Helper.captureScreenshot(driver,testName,"01_BrowserStarted");
 		
-		indexPage.addEmployee(excel.getStringData("Details", 0, 0), excel.getStringData("Details", 0, 1),excel.getStringData("Details", 0, 2));
+		indexPage.updateEmployee(excel.getStringData("Details", 0, 1), excel.getStringData("Update_Details", 0, 0), excel.getStringData("Update_Details", 0, 1), excel.getStringData("Update_Details", 0, 2));
 		
 		Helper.captureScreenshot(driver,testName,"02_InsertEmployeeDetails");
 		
-		indexPage.saveEmployee();
+		Thread.sleep(1500);
+		
+		indexPage.saveUpdatedEmployee();
 		
 		Thread.sleep(1500);
 		
 		Helper.captureScreenshot(driver,testName,"03_Complete");
 	}
-
 }

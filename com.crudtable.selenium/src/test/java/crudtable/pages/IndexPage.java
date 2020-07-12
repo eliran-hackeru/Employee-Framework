@@ -30,6 +30,12 @@ public class IndexPage {
 	
 	@FindBy(id = "colPhone") List<WebElement> uPhones;
 	
+	@FindBy(id = "colEdit") List<WebElement> editButton;
+	
+	@FindBy(id = "colDelete") List<WebElement> deleteButton;
+	
+	@FindBy(id = "update") WebElement updateButton;
+	
 	public void addEmployee (String nameApp, String emailApp, String phoneApp) 
 	{
 		uName.sendKeys(nameApp);
@@ -42,16 +48,39 @@ public class IndexPage {
 		saveButton.click();
 	}
 	
-	public void printEmployee(String employeeName)
+	public void printEmployee(String employeeEmail)
 	{
 		for (int i=0;i<uEmails.size();i++)
 		{
-			if (employeeName.equals(uEmails.get(i).getText())) 
+			if (employeeEmail.equals(uEmails.get(i).getText())) 
 			{
 				System.out.println("The Employee Details:");
 				System.out.println("Name: "+uNames.get(i).getText()+" Email: "+uEmails.get(i).getText()+" Phone: "+uPhones.get(i).getText());
 				break;
 			}
 		}
+	}
+	
+	public void updateEmployee(String oldEmail, String upName, String upEmail, String upPhone)
+	{
+		for (int i=0;i<uEmails.size();i++)
+		{
+			if (oldEmail.equals(uEmails.get(i).getText())) 
+			{
+				editButton.get(i).click();
+				Helper.waitForElementByID(driver, "update");
+				uName.clear();
+				uEmail.clear();
+				uPhone.clear();
+				addEmployee(upName, upEmail, upPhone);
+				break;
+			}
+		}
+		
+	}
+	
+	public void saveUpdatedEmployee()
+	{
+		updateButton.click();
 	}
 }
