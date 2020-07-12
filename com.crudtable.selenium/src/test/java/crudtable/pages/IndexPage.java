@@ -107,4 +107,14 @@ public class IndexPage {
 			saveEmployee();
 		}
 	}
+	
+	public void printAllEmployees()
+	{
+		System.out.println("The Employees Details:");
+		System.out.println("Name   Email   Phone");
+		for (int i=0;i<uEmails.size();i++)
+		{
+			System.out.println(uNames.get(i).getText()+" "+uEmails.get(i).getText()+" "+uPhones.get(i).getText());
+		}
+	}
 }

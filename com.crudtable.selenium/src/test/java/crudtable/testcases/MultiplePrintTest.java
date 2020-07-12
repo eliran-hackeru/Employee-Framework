@@ -7,7 +7,8 @@ import crudtable.pages.BaseClass;
 import crudtable.pages.IndexPage;
 import crudtable.utility.Helper;
 
-public class MultipleAddTest extends BaseClass
+
+public class MultiplePrintTest extends BaseClass
 {
 	@Test
 	public void addAllEmployeesApp() throws InterruptedException, IOException
@@ -18,7 +19,7 @@ public class MultipleAddTest extends BaseClass
 		
 		Helper.captureScreenshot(driver,testName,"01_BrowserStarted");
 		
-		indexPage.addAllEmployees("Details");
+		indexPage.printAllEmployees();
 		
 		Thread.sleep(1500);
 		
