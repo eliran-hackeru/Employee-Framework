@@ -6,7 +6,7 @@ import crudtable.pages.BaseClass;
 import crudtable.pages.IndexPage;
 import crudtable.utility.Helper;
 
-public class SingleEditTest extends BaseClass
+public class SingleDeleteTest extends BaseClass
 {
 	@Test
 	public void editEmployeeApp() throws InterruptedException
@@ -17,16 +17,10 @@ public class SingleEditTest extends BaseClass
 		
 		Helper.captureScreenshot(driver,testName,"01_BrowserStarted");
 		
-		indexPage.updateEmployee(excel.getStringData("Details", 0, 1), excel.getStringData("Update_Details", 0, 0), excel.getStringData("Update_Details", 0, 1), excel.getStringData("Update_Details", 0, 2));
-		
-		Helper.captureScreenshot(driver,testName,"02_InsertEmployeeDetails");
+		indexPage.deleteEmployee(excel.getStringData("Delete", 0, 1));
 		
 		Thread.sleep(1500);
 		
-		indexPage.saveUpdatedEmployee();
-		
-		Thread.sleep(1500);
-		
-		Helper.captureScreenshot(driver,testName,"03_Complete");
+		Helper.captureScreenshot(driver,testName,"02_Complete");
 	}
 }

@@ -83,4 +83,15 @@ public class IndexPage {
 	{
 		updateButton.click();
 	}
+	
+	public void deleteEmployee(String delEmail)
+	{
+		for (int i=0;i<uEmails.size();i++)
+		{
+			if (delEmail.equals(uEmails.get(i).getText()))
+			{
+				deleteButton.get(i).click();
+			}
+		}
+	}
 }
