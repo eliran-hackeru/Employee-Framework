@@ -134,4 +134,13 @@ public class IndexPage {
 			updateButton.click();
 		}
 	}
+	
+	public void deleteAllEmployees()
+	{
+		int total = uNames.size();
+		for (int i=0;i<total;i++)
+		{
+			deleteButton.get(0).click();
+		}
+	}
 }
