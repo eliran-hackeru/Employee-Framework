@@ -1,10 +1,12 @@
 package crudtable.pages;
 
+import java.io.IOException;
 import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
+import crudtable.utility.ExcelDataProvider;
 import crudtable.utility.Helper;
 
 public class IndexPage {
@@ -92,6 +94,17 @@ public class IndexPage {
 			{
 				deleteButton.get(i).click();
 			}
+		}
+	}
+	
+	public void addAllEmployees(String sheetName) throws IOException
+	{
+		int row = ExcelDataProvider.rowCounter(sheetName);
+		
+		for (int i=0;i<row;i++)
+		{
+			addEmployee(ExcelDataProvider.getStringData(sheetName, i, 0), ExcelDataProvider.getStringData(sheetName, i, 1), ExcelDataProvider.getStringData(sheetName, i, 2));
+			saveEmployee();
 		}
 	}
 }

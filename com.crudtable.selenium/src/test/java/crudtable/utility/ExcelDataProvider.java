@@ -2,12 +2,14 @@ package crudtable.utility;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.text.NumberFormat;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelDataProvider
 {
-	XSSFWorkbook wb;
+	static XSSFWorkbook wb;
 	
 	public ExcelDataProvider() 
 	{
@@ -27,7 +29,7 @@ public class ExcelDataProvider
 		return wb.getSheetAt(sheeIndex).getRow(row).getCell(column).getStringCellValue();
 	}
 	
-	public String getStringData(String sheetName, int row, int column)
+	public static String getStringData(String sheetName, int row, int column)
 	{
 		return wb.getSheet(sheetName).getRow(row).getCell(column).getStringCellValue();
 	}
@@ -44,6 +46,12 @@ public class ExcelDataProvider
 		String str = fmt.format(cell);
 
 		return str;
+	}
+	
+	public static int rowCounter(String sheetName) throws IOException// Counts the number of rows with data in the excel file
+	{
+		int value = wb.getSheet(sheetName).getLastRowNum()-wb.getSheet(sheetName).getFirstRowNum();
+		return value;
 	}
 
 }
