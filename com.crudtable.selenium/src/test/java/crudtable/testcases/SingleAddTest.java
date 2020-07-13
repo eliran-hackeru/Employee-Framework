@@ -24,6 +24,8 @@ public class SingleAddTest extends BaseClass
 		
 		indexPage.saveEmployee();
 		
+		indexPage.assertAddEmployee();
+		
 		Thread.sleep(1500);
 		
 		Helper.captureScreenshot(driver,testName,"03_Complete");

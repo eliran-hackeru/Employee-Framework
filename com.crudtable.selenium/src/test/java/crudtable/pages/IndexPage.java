@@ -40,6 +40,8 @@ public class IndexPage {
 	
 	@FindBy(id = "update") WebElement updateButton;
 	
+	@FindBy(id = "alert") WebElement alertMsg;
+	
 	public void addEmployee (String nameApp, String emailApp, String phoneApp) 
 	{
 		uName.sendKeys(nameApp);
@@ -142,5 +144,23 @@ public class IndexPage {
 		{
 			deleteButton.get(0).click();
 		}
+	}
+	
+	public void assertAddEmployee()
+	{
+		Assert.assertEquals(alertMsg.getText(), "The employee has been added!", "Adding an employee wasn't authenticated");
+		System.out.println("Assert passed");
+	}
+	
+	public void assertUpdateEmployee()
+	{
+		Assert.assertEquals(alertMsg.getText(), "The employee details have been updated!", "Adding an employee wasn't authenticated");
+		System.out.println("Assert passed");
+	}
+	
+	public void assertDeleteEmployee()
+	{
+		Assert.assertEquals(alertMsg.getText(), "The employee has been deleted!", "Adding an employee wasn't authenticated");
+		System.out.println("Assert passed");
 	}
 }

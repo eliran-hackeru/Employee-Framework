@@ -25,6 +25,8 @@ public class SingleEditTest extends BaseClass
 		
 		indexPage.saveUpdatedEmployee();
 		
+		indexPage.assertUpdateEmployee();
+		
 		Thread.sleep(1500);
 		
 		Helper.captureScreenshot(driver,testName,"03_Complete");

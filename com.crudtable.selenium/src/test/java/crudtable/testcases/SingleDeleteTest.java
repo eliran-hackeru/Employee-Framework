@@ -19,6 +19,8 @@ public class SingleDeleteTest extends BaseClass
 		
 		indexPage.deleteEmployee(excel.getStringData("Delete", 0, 1));
 		
+		indexPage.assertDeleteEmployee();
+		
 		Thread.sleep(1500);
 		
 		Helper.captureScreenshot(driver,testName,"02_Complete");
