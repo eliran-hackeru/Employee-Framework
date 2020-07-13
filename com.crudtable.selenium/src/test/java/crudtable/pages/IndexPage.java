@@ -10,6 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import crudtable.utility.ExcelDataProvider;
 import crudtable.utility.Helper;
+import net.bytebuddy.asm.Advice.Exit;
 
 public class IndexPage {
 	
@@ -54,7 +55,7 @@ public class IndexPage {
 		saveButton.click();
 	}
 	
-	public void printEmployee(String employeeEmail)
+	public int printEmployee(String employeeEmail)
 	{
 		for (int i=0;i<uEmails.size();i++)
 		{
@@ -62,9 +63,11 @@ public class IndexPage {
 			{
 				System.out.println("The Employee Details:");
 				System.out.println("Name: "+uNames.get(i).getText()+" Email: "+uEmails.get(i).getText()+" Phone: "+uPhones.get(i).getText());
-				break;
+				return 0;
 			}
 		}
+		System.out.println("Could not find the Employee");
+		return 0;
 	}
 	
 	public void updateEmployee(String oldEmail, String upName, String upEmail, String upPhone)
