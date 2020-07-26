@@ -47,7 +47,7 @@ public class BaseClass {
 	@BeforeTest
 	public void seExtent()
 	{
-		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"test-output/myReport.html");
+		htmlReporter = new ExtentHtmlReporter("./test-output/myReport.html");
 		
 		htmlReporter.config().setDocumentTitle("Automation Report");// Title of the report
 		htmlReporter.config().setReportName("Functional Report");// Name of the report
