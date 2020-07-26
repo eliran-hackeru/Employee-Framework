@@ -13,6 +13,8 @@ public class SingleDeleteTest extends BaseClass
 	{
 		String testName = new Throwable().getStackTrace()[0].getMethodName();
 		
+		extentTest = extent.createTest(testName);
+		
 		IndexPage indexPage = PageFactory.initElements(driver, IndexPage.class);
 		
 		Helper.captureScreenshot(driver,testName,"01_BrowserStarted");
