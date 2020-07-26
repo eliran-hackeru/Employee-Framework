@@ -55,19 +55,17 @@ public class IndexPage {
 		saveButton.click();
 	}
 	
-	public int printEmployee(String employeeEmail)
+	public String printEmployee(String employeeEmail)
 	{
 		for (int i=0;i<uEmails.size();i++)
 		{
 			if (employeeEmail.equals(uEmails.get(i).getText())) 
 			{
-				System.out.println("The Employee Details:");
-				System.out.println("Name: "+uNames.get(i).getText()+" Email: "+uEmails.get(i).getText()+" Phone: "+uPhones.get(i).getText());
-				return 0;
+				return "The Employee has been found:\nName: "+uNames.get(i).getText()+" Email: "+uEmails.get(i).getText()+" Phone: "+uPhones.get(i).getText();
+//				System.out.println("Name: "+uNames.get(i).getText()+" Email: "+uEmails.get(i).getText()+" Phone: "+uPhones.get(i).getText());
 			}
 		}
-		System.out.println("Could not find the Employee");
-		return 0;
+		return "Could not find the Employee: " + employeeEmail;
 	}
 	
 	public void updateEmployee(String oldEmail, String upName, String upEmail, String upPhone)

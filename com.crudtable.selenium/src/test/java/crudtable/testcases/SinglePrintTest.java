@@ -19,7 +19,7 @@ public class SinglePrintTest extends BaseClass
 		
 		Helper.captureScreenshot(driver,testName,"01_BrowserStarted");
 		
-		indexPage.printEmployee(excel.getStringData("Details", 0, 1));
+		extentTest.createNode(indexPage.printEmployee(excel.getStringData("Details", 0, 1)));
 		
 		Thread.sleep(1500);
 		
