@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="crudtable.testcases.SingleEditTest">
+      <class name="crudtable.testcases.SinglePrintTest">
         <methods>
           <include name="setUpSuite"/>
+          <include name="printEmployeeApp"/>
           <include name="setupApplication"/>
           <include name="tearDownMethod"/>
           <include name="tearDown"/>
-          <include name="editEmployeeApp"/>
         </methods>
-      </class> <!-- crudtable.testcases.SingleEditTest -->
+      </class> <!-- crudtable.testcases.SinglePrintTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
