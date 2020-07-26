@@ -21,7 +21,7 @@ public class MultiplePrintTest extends BaseClass
 		
 		Helper.captureScreenshot(driver,testName,"01_BrowserStarted");
 		
-		indexPage.printAllEmployees();
+		extentTest.createNode(indexPage.printAllEmployees());
 		
 		Thread.sleep(1500);
 		
