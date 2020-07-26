@@ -1,48 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-07-26T20:40:21 IDT" name="Default suite" finished-at="2020-07-26T20:40:32 IDT" duration-ms="10589">
+  <suite started-at="2020-07-26T22:50:16 IDT" name="Default suite" finished-at="2020-07-26T22:50:37 IDT" duration-ms="20810">
     <groups>
     </groups>
-    <test started-at="2020-07-26T20:40:21 IDT" name="Default test" finished-at="2020-07-26T20:40:32 IDT" duration-ms="10589">
-      <class name="crudtable.testcases.MultiplePrintTest">
-        <test-method is-config="true" signature="setUpSuite()[pri:0, instance:crudtable.testcases.MultiplePrintTest@18ce0030]" started-at="2020-07-26T20:40:21 IDT" name="setUpSuite" finished-at="2020-07-26T20:40:21 IDT" duration-ms="476" status="PASS">
+    <test started-at="2020-07-26T22:50:16 IDT" name="Default test" finished-at="2020-07-26T22:50:37 IDT" duration-ms="20810">
+      <class name="crudtable.testcases.FullSingleTest">
+        <test-method is-config="true" signature="setUpSuite()[pri:0, instance:crudtable.testcases.FullSingleTest@25d250c6]" started-at="2020-07-26T22:50:16 IDT" name="setUpSuite" finished-at="2020-07-26T22:50:16 IDT" duration-ms="467" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpSuite -->
-        <test-method is-config="true" signature="seExtent()[pri:0, instance:crudtable.testcases.MultiplePrintTest@18ce0030]" started-at="2020-07-26T20:40:21 IDT" name="seExtent" finished-at="2020-07-26T20:40:21 IDT" duration-ms="93" status="PASS">
+        <test-method is-config="true" signature="seExtent()[pri:0, instance:crudtable.testcases.FullSingleTest@25d250c6]" started-at="2020-07-26T22:50:16 IDT" name="seExtent" finished-at="2020-07-26T22:50:16 IDT" duration-ms="94" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- seExtent -->
-        <test-method is-config="true" signature="setupApplication()[pri:0, instance:crudtable.testcases.MultiplePrintTest@18ce0030]" started-at="2020-07-26T20:40:21 IDT" name="setupApplication" finished-at="2020-07-26T20:40:28 IDT" duration-ms="6572" status="PASS">
+        <test-method is-config="true" signature="setupApplication()[pri:0, instance:crudtable.testcases.FullSingleTest@25d250c6]" started-at="2020-07-26T22:50:16 IDT" name="setupApplication" finished-at="2020-07-26T22:50:23 IDT" duration-ms="6482" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupApplication -->
-        <test-method signature="printAllEmployeesApp()[pri:0, instance:crudtable.testcases.MultiplePrintTest@18ce0030]" started-at="2020-07-26T20:40:28 IDT" name="printAllEmployeesApp" finished-at="2020-07-26T20:40:31 IDT" duration-ms="3022" status="PASS">
+        <test-method signature="addEmployeeApp()[pri:0, instance:crudtable.testcases.FullSingleTest@25d250c6]" started-at="2020-07-26T22:50:23 IDT" name="addEmployeeApp" finished-at="2020-07-26T22:50:26 IDT" duration-ms="3169" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- printAllEmployeesApp -->
-        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:crudtable.testcases.MultiplePrintTest@18ce0030]" started-at="2020-07-26T20:40:31 IDT" name="tearDownMethod" finished-at="2020-07-26T20:40:31 IDT" duration-ms="7" status="PASS">
+        </test-method> <!-- addEmployeeApp -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:crudtable.testcases.FullSingleTest@25d250c6]" started-at="2020-07-26T22:50:26 IDT" name="tearDownMethod" finished-at="2020-07-26T22:50:26 IDT" duration-ms="5" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=printAllEmployeesApp status=SUCCESS method=MultiplePrintTest.printAllEmployeesApp()[pri:0, instance:crudtable.testcases.MultiplePrintTest@18ce0030] output={null}]]]>
+                <![CDATA[[TestResult name=addEmployeeApp status=SUCCESS method=FullSingleTest.addEmployeeApp()[pri:0, instance:crudtable.testcases.FullSingleTest@25d250c6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:crudtable.testcases.MultiplePrintTest@18ce0030]" started-at="2020-07-26T20:40:31 IDT" name="tearDown" finished-at="2020-07-26T20:40:31 IDT" duration-ms="656" status="PASS">
+        <test-method signature="printEmployeeApp()[pri:1, instance:crudtable.testcases.FullSingleTest@25d250c6]" started-at="2020-07-26T22:50:26 IDT" name="printEmployeeApp" finished-at="2020-07-26T22:50:29 IDT" duration-ms="2516" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- printEmployeeApp -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:crudtable.testcases.FullSingleTest@25d250c6]" started-at="2020-07-26T22:50:29 IDT" name="tearDownMethod" finished-at="2020-07-26T22:50:29 IDT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=printEmployeeApp status=SUCCESS method=FullSingleTest.printEmployeeApp()[pri:1, instance:crudtable.testcases.FullSingleTest@25d250c6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method signature="editEmployeeApp()[pri:2, instance:crudtable.testcases.FullSingleTest@25d250c6]" started-at="2020-07-26T22:50:29 IDT" name="editEmployeeApp" finished-at="2020-07-26T22:50:34 IDT" duration-ms="5025" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editEmployeeApp -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:crudtable.testcases.FullSingleTest@25d250c6]" started-at="2020-07-26T22:50:34 IDT" name="tearDownMethod" finished-at="2020-07-26T22:50:34 IDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=editEmployeeApp status=SUCCESS method=FullSingleTest.editEmployeeApp()[pri:2, instance:crudtable.testcases.FullSingleTest@25d250c6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method signature="deleteEmployeeApp()[pri:3, instance:crudtable.testcases.FullSingleTest@25d250c6]" started-at="2020-07-26T22:50:34 IDT" name="deleteEmployeeApp" finished-at="2020-07-26T22:50:36 IDT" duration-ms="2622" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteEmployeeApp -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:crudtable.testcases.FullSingleTest@25d250c6]" started-at="2020-07-26T22:50:36 IDT" name="tearDownMethod" finished-at="2020-07-26T22:50:36 IDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteEmployeeApp status=SUCCESS method=FullSingleTest.deleteEmployeeApp()[pri:3, instance:crudtable.testcases.FullSingleTest@25d250c6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:crudtable.testcases.FullSingleTest@25d250c6]" started-at="2020-07-26T22:50:36 IDT" name="tearDown" finished-at="2020-07-26T22:50:37 IDT" duration-ms="630" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="endReport()[pri:0, instance:crudtable.testcases.MultiplePrintTest@18ce0030]" started-at="2020-07-26T20:40:31 IDT" name="endReport" finished-at="2020-07-26T20:40:32 IDT" duration-ms="210" status="PASS">
+        <test-method is-config="true" signature="endReport()[pri:0, instance:crudtable.testcases.FullSingleTest@25d250c6]" started-at="2020-07-26T22:50:37 IDT" name="endReport" finished-at="2020-07-26T22:50:37 IDT" duration-ms="217" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-      </class> <!-- crudtable.testcases.MultiplePrintTest -->
+      </class> <!-- crudtable.testcases.FullSingleTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
